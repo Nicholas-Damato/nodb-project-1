@@ -34,11 +34,10 @@ module.exports = {
     },
     editGame: (req, res) => {
         const { id } = req.params
-        const { image, title, rating, notes } = req.body
+        const { rating, notes } = req.body
         index = videoGames.findIndex(e => e.id === +id)
         videoGames.splice(index, 1, {
-            image,
-            title,
+            ...videoGames[index],
             rating,
             notes
         })

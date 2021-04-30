@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
 class Game extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             editMode: false,
             rating: 0,
-            notes: ''
+            notes: this.props.game.notes
         }
     }
 
@@ -23,7 +23,7 @@ class Game extends Component {
     }
 
     saveChanges = () => {
-        this.props.editGame(this.props.id, this.state.rating, this.state.notes)
+        this.props.editGame(this.props.game.id, this.state.rating, this.state.notes)
         this.editMode()
         this.setState({ rating: 0, notes: '' })
     }
