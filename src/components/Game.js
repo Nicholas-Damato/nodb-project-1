@@ -44,9 +44,9 @@ class Game extends Component {
     render() {
         const { game } = this.props
         return this.state.editMode ? (
-            <div>
+            <tr className='item'>
                 <h2> {game.title} </h2>
-                <img alt={game.title} src={game.image} />
+                <img className='image' alt={game.title} src={game.image} />
                 <h3> {this.state.rating}/10 </h3>
                 <br />
                 <button onClick={() => this.increaseRating(this.state.rating)}> Increase Rating </button>
@@ -55,16 +55,17 @@ class Game extends Component {
                 <input value={this.state.notes} onChange={(e) => this.handleNotes(e.target.value)} />
                 <br />
                 <button onClick={() => this.saveChanges()}> Save Changes </button>
-            </div>
+            </tr>
         ) : (
-            <div>
-                <h2>{game.title} </h2>
-                <img alt={game.title} src={game.image} />
-                <h3> {game.rating}/10 </h3>
-                <p> {game.notes} </p>
-                <button onClick={() => this.editMode()}> Edit </button>
-                <button onClick={() => this.delete(game.id)}> Delete </button>
-            </div>
+
+            <tr className='item'>
+                <h2 className='test'>{game.title} </h2>
+                <img className='image' alt={game.title} src={game.image} />
+                <h3 className='test'> {game.rating}/10 </h3>
+                <p className='test text'> {game.notes} </p>
+                <button className='test' onClick={() => this.editMode()}> Edit </button>
+                <button className='test' onClick={() => this.delete(game.id)}> Delete </button>
+            </tr>
         )
     }
 }

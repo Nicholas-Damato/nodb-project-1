@@ -4,7 +4,7 @@ let videoGames = [
         image: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Xenogears_box.jpg/220px-Xenogears_box.jpg',
         title: 'Xenogears',
         rating: 10,
-        notes: 'Incredible Potential'
+        notes: 'stuff goes here'
     }
 ]
 let id = 2

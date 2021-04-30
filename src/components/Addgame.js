@@ -37,14 +37,20 @@ class AddGame extends Component {
 
     render() {
         return (
-            <div>
-                <input value={this.state.title} onChange={(e) => this.handleTitle(e.target.value)} placeholder='Title of Game!' />
-                <input value={this.state.image} onChange={(e) => this.handleImage(e.target.value)} placeholder='Image URL' />
-                <button onClick={() => { this.decreaseRating(this.state.rating) }}> Decrease </button>
-                Rating: {this.state.rating}
-                <button onClick={() => this.increaseRating(this.state.rating)}> Increase</button>
-                <input value={this.state.notes} onChange={(e) => this.handleNotes(e.target.value)} placeholder='Additional Notes!' />
-                <button onClick={() => this.props.addGame(this.state.title, this.state.image, this.state.rating, this.state.notes)}> Add game to list! </button>
+            <div className='form'>
+                <h2> Enter the games title: </h2>
+                <input className='inputs' value={this.state.title} onChange={(e) => this.handleTitle(e.target.value)} placeholder='Title of Game!' />
+                <h2> Paste Picture URL Here: </h2>
+                <input className='inputs' value={this.state.image} onChange={(e) => this.handleImage(e.target.value)} placeholder='Image URL' />
+                <h2> Rating: </h2>
+                <div className='more-list'>
+                    <button className='buttons' onClick={() => this.increaseRating(this.state.rating)}> Increase</button>
+                    Rating: {this.state.rating}
+                    <button className='buttons' onClick={() => this.decreaseRating(this.state.rating)}> Decrease </button>
+                </div>
+                <h2> Add Notes: </h2>
+                <input className='inputs' value={this.state.notes} onChange={(e) => this.handleNotes(e.target.value)} placeholder='Additional Notes!' />
+                <button className='buttons' onClick={() => this.props.addGame(this.state.title, this.state.image, this.state.rating, this.state.notes)}> Add game to list! </button>
 
             </div>
         )

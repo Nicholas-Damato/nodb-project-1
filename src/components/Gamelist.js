@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Addgame from './Addgame'
 import Game from './Game'
 
+
 class Gamelist extends Component {
     constructor() {
         super()
@@ -37,12 +38,15 @@ class Gamelist extends Component {
 
 
     render() {
+        const mappedArray = this.state.gameList.map(game => {
+            return <Game key={game.id} game={game} editGame={this.editGame} deleteGame={this.deleteGame} />
+        })
         return (
-            <div>
+            <div className='parent'>
                 <Addgame addGame={this.addGame} />
-                {this.state.gameList.map(game => {
-                    return <Game key={game.id} game={game} editGame={this.editGame} deleteGame={this.deleteGame} />
-                })}
+                <table className='list'>
+                    {mappedArray}
+                </table>
             </div>
         )
     }

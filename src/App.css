@@ -1,43 +1,82 @@
-.App {
-  text-align: center;
+body {
+  margin: 0
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  background-color: rgb(47, 47, 141);
+  height: 87px;
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.list{
+  border: 2px solid black;
+  width: 100vw;
+  margin: 50px;
+  box-shadow: 5px 5px 5px 5px gray;
+  display: block;
+  align-items: flex-start;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttons {
+
+}
+
+.inputs{
+  height: 90px;
+}
+
+.form {
+  background-color: rgb(66, 61, 61);
+  color: white;
+  border: 5px solid black;
+  width: 400px;
+  height: 91vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.parent {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.more-list{
+  display: block;
 }
 
+.image{
+  width: 100px;
+}
 
-.testing { 
-  background-color: pink;
+.item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.test {
+  width: 100px;
+}
+
+.text {
+  overflow:auto;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+tr {
+  border: 2px solid black;
+}
+
+.header-text{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+
 }
