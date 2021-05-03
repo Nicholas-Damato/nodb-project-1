@@ -38,9 +38,9 @@ class AddGame extends Component {
     render() {
         return (
             <div className='form'>
-                <h2> Enter the games title: </h2>
+                <h2> Title: </h2>
                 <textarea className='inputs' value={this.state.title} onChange={(e) => this.handleTitle(e.target.value)} placeholder='Title of Game!' />
-                <h2> Paste Picture URL Here: </h2>
+                <h2> URL: </h2>
                 <textarea className='inputs' value={this.state.image} onChange={(e) => this.handleImage(e.target.value)} placeholder='Image URL' />
                 <h2> Rating: </h2>
                 <div className='more-list'>
@@ -50,7 +50,8 @@ class AddGame extends Component {
                 </div>
                 <h2> Add Notes: </h2>
                 <textarea className='inputs' value={this.state.notes} onChange={(e) => this.handleNotes(e.target.value)} placeholder='Additional Notes!' />
-                <button className='buttons' onClick={() => this.props.addGame(this.state.title, this.state.image, this.state.rating, this.state.notes, this.setState({ title: '', image: '', rating: 0, notes: '' }))}> Add game to list! </button>
+                <button className='buttons' onClick={() => this.props.addGame(this.state.title, this.state.image, this.state.rating, this.state.notes,
+                    this.setState({ title: '', image: '', rating: 0, notes: '' }))}> Add game to list! </button>
 
             </div>
         )
