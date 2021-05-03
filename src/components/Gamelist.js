@@ -8,7 +8,7 @@ class Gamelist extends Component {
     constructor() {
         super()
         this.state = {
-            gameList: [],
+            gameList: []
         }
     }
 
@@ -17,6 +17,8 @@ class Gamelist extends Component {
             .then((res) => this.setState({ gameList: res.data }))
             .catch(err => console.log(err))
     }
+
+    compon
 
     deleteGame = (id) => {
         axios.delete(`/api/games/${id}`)
@@ -35,6 +37,7 @@ class Gamelist extends Component {
             .then((res) => this.setState({ gameList: res.data }))
             .catch(err => console.log(err))
     }
+
 
 
     render() {

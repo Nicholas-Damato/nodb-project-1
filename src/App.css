@@ -11,10 +11,10 @@ body {
 
 
 .list{
-  border: 2px solid black;
+  border: 2px solid rgb(47, 47, 141);
   width: 100vw;
   margin: 50px;
-  box-shadow: 5px 5px 5px 5px gray;
+  box-shadow: 5px 5px 5px 8px gray;
   display: block;
   align-items: flex-start;
   list-style: square;
@@ -58,8 +58,9 @@ button:hover {
   align-items: center;
   flex-direction: row;
   justify-content: space-evenly;
-  border: 1px solid black;
+  border: 1px solid rgb(47, 47, 141);
   text-align: center;
+  color: rgb(47, 47, 141);
 }
 
 .test {
@@ -83,4 +84,22 @@ tr {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
   color: yellow;
+}
+
+body {
+  background-image: url('https://steamcommunity-a.akamaihd.net/economy/profilebackground/items/460790/66bd9d7c5a6c8a209493b57506b6b8956b72dbae.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.white-text{
+  background-color: rgb(66, 61, 61);
+  color: white;
+  border: 5px solid black;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }

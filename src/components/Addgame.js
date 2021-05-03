@@ -52,6 +52,10 @@ class AddGame extends Component {
                 <textarea className='inputs' value={this.state.notes} onChange={(e) => this.handleNotes(e.target.value)} placeholder='Additional Notes!' />
                 <button className='buttons' onClick={() => this.props.addGame(this.state.title, this.state.image, this.state.rating, this.state.notes,
                     this.setState({ title: '', image: '', rating: 0, notes: '' }))}> Add game to list! </button>
+                <div>
+                    <h2> Change Background Here! </h2>
+                    <input />
+                </div>
 
             </div>
         )
