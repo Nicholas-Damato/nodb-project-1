@@ -86,11 +86,11 @@ tr {
   color: yellow;
 }
 
-body {
+/* body {
   background-image: url('https://steamcommunity-a.akamaihd.net/economy/profilebackground/items/460790/66bd9d7c5a6c8a209493b57506b6b8956b72dbae.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
+} */
 
 .white-text{
   background-color: rgb(66, 61, 61);
