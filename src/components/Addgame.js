@@ -39,18 +39,18 @@ class AddGame extends Component {
         return (
             <div className='form'>
                 <h2> Enter the games title: </h2>
-                <input className='inputs' value={this.state.title} onChange={(e) => this.handleTitle(e.target.value)} placeholder='Title of Game!' />
+                <textarea className='inputs' value={this.state.title} onChange={(e) => this.handleTitle(e.target.value)} placeholder='Title of Game!' />
                 <h2> Paste Picture URL Here: </h2>
-                <input className='inputs' value={this.state.image} onChange={(e) => this.handleImage(e.target.value)} placeholder='Image URL' />
+                <textarea className='inputs' value={this.state.image} onChange={(e) => this.handleImage(e.target.value)} placeholder='Image URL' />
                 <h2> Rating: </h2>
                 <div className='more-list'>
                     <button className='buttons' onClick={() => this.increaseRating(this.state.rating)}> Increase</button>
-                    Rating: {this.state.rating}
+                    {" "} Rating: {this.state.rating} {" "}
                     <button className='buttons' onClick={() => this.decreaseRating(this.state.rating)}> Decrease </button>
                 </div>
                 <h2> Add Notes: </h2>
-                <input className='inputs' value={this.state.notes} onChange={(e) => this.handleNotes(e.target.value)} placeholder='Additional Notes!' />
-                <button className='buttons' onClick={() => this.props.addGame(this.state.title, this.state.image, this.state.rating, this.state.notes)}> Add game to list! </button>
+                <textarea className='inputs' value={this.state.notes} onChange={(e) => this.handleNotes(e.target.value)} placeholder='Additional Notes!' />
+                <button className='buttons' onClick={() => this.props.addGame(this.state.title, this.state.image, this.state.rating, this.state.notes, this.setState({ title: '', image: '', rating: 0, notes: '' }))}> Add game to list! </button>
 
             </div>
         )

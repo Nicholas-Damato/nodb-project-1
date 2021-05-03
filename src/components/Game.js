@@ -5,7 +5,7 @@ class Game extends Component {
         super(props)
         this.state = {
             editMode: false,
-            rating: 0,
+            rating: this.props.game.rating,
             notes: this.props.game.notes
         }
     }

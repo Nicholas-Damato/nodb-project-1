@@ -20,7 +20,8 @@ body {
 }
 
 .buttons {
-
+background-color: none;
+border: 1px solid black;
 }
 
 .inputs{
