@@ -44,9 +44,9 @@ class AddGame extends Component {
                 <textarea className='inputs' value={this.state.image} onChange={(e) => this.handleImage(e.target.value)} placeholder='Image URL' />
                 <h2> Rating: </h2>
                 <div className='more-list'>
-                    <button className='buttons' onClick={() => this.increaseRating(this.state.rating)}> Increase</button>
-                    {" "} Rating: {this.state.rating} {" "}
                     <button className='buttons' onClick={() => this.decreaseRating(this.state.rating)}> Decrease </button>
+                    {" "} Rating: {this.state.rating} {" "}
+                    <button className='buttons' onClick={() => this.increaseRating(this.state.rating)}> Increase</button>
                 </div>
                 <h2> Add Notes: </h2>
                 <textarea className='inputs' value={this.state.notes} onChange={(e) => this.handleNotes(e.target.value)} placeholder='Additional Notes!' />

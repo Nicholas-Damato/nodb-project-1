@@ -19,11 +19,12 @@ body {
   display: block;
   align-items: flex-start;
   list-style: square;
+  padding: 5px;
 }
 
 
 button:hover {
-  background-color: rgb(255, 237, 74);
+  background-color: rgb(47, 47, 141);
 }
 
 .inputs{
@@ -125,4 +126,8 @@ tr {
 
 textarea {
   resize: none;
+}
+
+.title {
+  width: 200px;
 }

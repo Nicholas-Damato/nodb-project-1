@@ -45,7 +45,7 @@ class Game extends Component {
         const { game } = this.props
         return this.state.editMode ? (
             <div className='item'>
-                <h2> {game.title} </h2>
+                <h2 className='title'> {game.title} </h2>
                 <img className='image' alt={game.title} src={game.image} />
                 <h3> {this.state.rating}/10 </h3>
                 <br />
@@ -59,7 +59,7 @@ class Game extends Component {
         ) : (
 
             <div className='item'>
-                <h2 className='test'>{game.title} </h2>
+                <h2 className='test title'>{game.title} </h2>
                 <img className='image' alt={game.title} src={game.image} />
                 <h3 className='test'> {game.rating}/10 </h3>
                 <p className='test text'> {game.notes} </p>
