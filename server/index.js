@@ -12,7 +12,8 @@ app.get('/api/games', gameCtrl.display)
 app.post('/api/games', gameCtrl.addGame)
 app.put('/api/games/:id', gameCtrl.editGame)
 app.delete('/api/games/:id', gameCtrl.delete)
-app.get('api/background', backCtrl.getBack)
+app.get('/api/background', backCtrl.getBack)
+app.put('/api/background/:id', backCtrl.newBack)
 
 
 app.listen(PORT, () => console.log(`Your server is running on port ${PORT}`))

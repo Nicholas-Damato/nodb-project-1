@@ -47,9 +47,9 @@ class Gamelist extends Component {
         return (
             <div className='parent'>
                 <Addgame addGame={this.addGame} />
-                <table className='list'>
+                <div className='list'>
                     {mappedArray}
-                </table>
+                </div>
             </div>
         )
     }

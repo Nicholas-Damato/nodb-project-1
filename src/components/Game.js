@@ -44,7 +44,7 @@ class Game extends Component {
     render() {
         const { game } = this.props
         return this.state.editMode ? (
-            <tr className='item'>
+            <div className='item'>
                 <h2> {game.title} </h2>
                 <img className='image' alt={game.title} src={game.image} />
                 <h3> {this.state.rating}/10 </h3>
@@ -55,17 +55,17 @@ class Game extends Component {
                 <input value={this.state.notes} onChange={(e) => this.handleNotes(e.target.value)} />
                 <br />
                 <button onClick={() => this.saveChanges()}> Save Changes </button>
-            </tr>
+            </div>
         ) : (
 
-            <tr className='item'>
+            <div className='item'>
                 <h2 className='test'>{game.title} </h2>
                 <img className='image' alt={game.title} src={game.image} />
                 <h3 className='test'> {game.rating}/10 </h3>
                 <p className='test text'> {game.notes} </p>
                 <button className='test' onClick={() => this.editMode()}> Edit </button>
                 <button className='test' onClick={() => this.delete(game.id)}> Delete </button>
-            </tr>
+            </div>
         )
     }
 }
