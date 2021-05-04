@@ -32,7 +32,7 @@ button:hover {
 .form {
   background-color: rgb(66, 61, 61);
   color: white;
-  border: 5px solid black;
+  border: 5px solid rgb(47, 47, 141);
   width: 400px;
   height: 91vh;
   display: flex;
@@ -95,11 +95,28 @@ tr {
 .white-text{
   background-color: rgb(66, 61, 61);
   color: white;
-  border: 5px solid black;
+  border: 5px solid rgb(47, 47, 141);
   width: 400px;
   height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.form-2 {
+  background-color: rgb(66, 61, 61);
+  color: white;
+  border: 5px solid rgb(47, 47, 141);
+  width: 307.50px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.little-text {
+  font-size: 10px;
 }
