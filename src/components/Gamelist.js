@@ -28,7 +28,9 @@ class Gamelist extends Component {
 
     addGame = (title, image, rating, notes) => {
         if (title === '') {
-            console.log('Please submit a title')
+            alert('Please enter a title!')
+        } else if (image === '') {
+            alert('Please enter a URL for the image!')
         } else {
             axios.post(`/api/games`, { title, image, rating, notes })
                 .then((res) => this.setState({ gameList: res.data }))

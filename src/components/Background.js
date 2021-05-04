@@ -18,9 +18,13 @@ class Background extends Component {
     }
 
     editBackground = (id, image) => {
-        axios.put(`/api/background/${id}`, { image })
-            .then((res) => this.setState({ url: res.data }))
-            .catch(err => console.log(err))
+        if (!image.includes('http')) {
+            alert('Please enter a URL')
+        } else {
+            axios.put(`/api/background/${id}`, { image })
+                .then((res) => this.setState({ url: res.data }))
+                .catch(err => console.log(err))
+        }
     }
 
     handleChange = (inputVal) => {
@@ -33,7 +37,7 @@ class Background extends Component {
             <footer className='form-2'>
                 <h2> Change Background: </h2>
                 <input className='spacing' value={this.state.inputVal} onChange={(e) => this.handleChange(e.target.value)} placeholder='URL here' />
-                <button onClick={() => this.editBackground(this.state.url.id, this.state.inputVal)}> Change Background</button>
+                <button onClick={() => this.editBackground(this.state.url.id, this.state.inputVal, this.setState({ inputVal: '' }))}> Change Background</button>
                 <style>
                     {`body {background-image: url(${this.state.url.image}) }`}
                     {`body {background-repeat: no-repeat}`}
