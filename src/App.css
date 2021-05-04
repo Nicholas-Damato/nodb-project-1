@@ -23,7 +23,7 @@ body {
 
 
 button:hover {
-  background-color: yellow;
+  background-color: rgb(255, 237, 74);
 }
 
 .inputs{
@@ -32,7 +32,7 @@ button:hover {
 
 .form {
   background-color: rgb(66, 61, 61);
-  color: white;
+  color: rgb(255, 237, 74);
   border: 5px solid rgb(47, 47, 141);
   width: 400px;
   height: 91vh;
@@ -51,7 +51,9 @@ button:hover {
 }
 
 .image{
-  width: 100px;
+  width: 130px;
+  margin: 10px 0;
+  border: 1px solid white;
 }
 
 .item {
@@ -86,11 +88,6 @@ tr {
   color: yellow;
 }
 
-/* body {
-  background-image: url('https://steamcommunity-a.akamaihd.net/economy/profilebackground/items/460790/66bd9d7c5a6c8a209493b57506b6b8956b72dbae.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-} */
 
 .white-text{
   background-color: rgb(66, 61, 61);
@@ -110,9 +107,22 @@ tr {
   justify-content: center;
   align-items: center;
   color:rgb(255, 237, 74);
+
 }
+
+/* -webkit-text-stroke-width: 2px; */
+    /* -webkit-text-stroke-color: black; */
 
 .spacing{
   margin-left: 20px;
   margin-right: 20px;
+}
+
+.specified-text {
+  -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+textarea {
+  resize: none;
 }
