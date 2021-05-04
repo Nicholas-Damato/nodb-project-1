@@ -52,7 +52,7 @@ class Game extends Component {
                 <button onClick={() => this.increaseRating(this.state.rating)}> Increase Rating </button>
                 <button onClick={() => this.decreaseRating(this.state.rating)}> Decrease Rating </button>
                 <br />
-                <input value={this.state.notes} onChange={(e) => this.handleNotes(e.target.value)} />
+                <textarea value={this.state.notes} onChange={(e) => this.handleNotes(e.target.value)} />
                 <br />
                 <button onClick={() => this.saveChanges()}> Save Changes </button>
             </div>

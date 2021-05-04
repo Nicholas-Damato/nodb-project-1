@@ -27,9 +27,13 @@ class Gamelist extends Component {
     }
 
     addGame = (title, image, rating, notes) => {
-        axios.post(`/api/games`, { title, image, rating, notes })
-            .then((res) => this.setState({ gameList: res.data }))
-            .catch(err => console.log(err))
+        if (title === '') {
+            console.log('Please submit a title')
+        } else {
+            axios.post(`/api/games`, { title, image, rating, notes })
+                .then((res) => this.setState({ gameList: res.data }))
+                .catch(err => console.log(err))
+        }
     }
 
     editGame = (id, rating, notes) => {

@@ -58,9 +58,9 @@ button:hover {
   align-items: center;
   flex-direction: row;
   justify-content: space-evenly;
-  border: 1px solid rgb(47, 47, 141);
+  border: 2px solid rgb(47, 47, 141);
   text-align: center;
-  color: rgb(47, 47, 141);
+  color: rgb(255, 237, 74);
 }
 
 .test {
@@ -105,18 +105,15 @@ tr {
 }
 
 .form-2 {
-  background-color: rgb(66, 61, 61);
-  color: white;
-  border: 5px solid rgb(47, 47, 141);
-  width: 307.50px;
-  height: 200px;
+  background-color: rgb(47, 47, 141);
+  height: 87px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  color:rgb(255, 237, 74);
 }
 
-.little-text {
-  font-size: 10px;
+.spacing{
+  margin-left: 20px;
+  margin-right: 20px;
 }
